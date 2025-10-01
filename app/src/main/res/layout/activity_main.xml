@@ -5,27 +5,43 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="?android:attr/windowBackground"
     tools:context=".MainActivity">
 
+    <!-- Title Text -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/activity_main"
-        android:textSize="50sp"
+        android:textSize="36sp"
         android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <Button
-        android:id="@+id/btnNavigate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_navigate"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintBottom_toTopOf="@id/btnNavigate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <!-- Navigate Button -->
+    <Button
+        android:id="@+id/btnNavigate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_navigate"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:backgroundTint="@color/purple_500"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="32dp"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
